@@ -35,3 +35,41 @@ $bluegrey-lightgreen-theme: mat-dark-theme($bluegrey-lightgreen-primary, $bluegr
 $deeporange-indigo-primary: mat-palette($mat-deep-orange, 700, 500, 900);
 $deeporange-indigo-accent: mat-palette($mat-indigo, 900, 300, A100);
 $deeporange-indigo-theme: mat-light-theme($deeporange-indigo-primary, $deeporange-indigo-accent);
+
+$aura-blue: (
+    50 : #e2e2ea,
+    100 : #b6b6ca,
+    200 : #8585a7,
+    300 : #545483,
+    400 : #303069,
+    500 : #0b0b4e,
+    600 : #0a0a47,
+    700 : #08083d,
+    800 : #060635,
+    900 : #030325,
+    A100 : #6060ff,
+    A200 : #2d2dff,
+    A400 : #0000f9,
+    A700 : #0000e0,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$aura-primary: mat-palette($aura-blue);
+$aura-accent:  mat-palette($mat-light-blue, A400, A100, A700);
+$aura-warn:    mat-palette($mat-deep-orange);
+$aura-theme:   mat-light-theme($aura-primary, $aura-accent, $aura-warn);

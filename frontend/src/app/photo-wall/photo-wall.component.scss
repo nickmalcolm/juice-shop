@@ -78,6 +78,10 @@ input {
   transition: .5s ease;
 }
 
+.aura-theme .overlay {
+  background: rgba(255,255,255,.75);
+}
+
 .container:hover .overlay {
   opacity: 1;
 }

@@ -56,6 +56,7 @@
 
   .primary-notification {
     background-color: mat-color(map-get($theme, primary), darker);
+    background-color: mat-color(map-get($theme, accent), lighter);
   }
 
   .accent-notification {
@@ -183,6 +184,11 @@ $bg-hacking-instructor: rgba(0, 0, 0, .3);
 .deeporange-indigo-theme {
   @include angular-material-theme($deeporange-indigo-theme);
   @include custom-components-theme($deeporange-indigo-theme);
+}
+
+.aura-theme {
+  @include angular-material-theme($aura-theme);
+  @include custom-components-theme($aura-theme);
 }
 
 .close-dialog {
