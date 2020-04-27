@@ -52,5 +52,12 @@ exports.themes = {
     navColor: '#E64A19',
     primLight: '#FF5722',
     primDark: '#BF360C'
+  },
+  'aura': {
+    bgColor: '#FAFAFA',
+    textColor: '#000000',
+    navColor: '#0b0b4e',
+    primLight: '#29B6F6',
+    primDark: '#08083d'
   }
 }
