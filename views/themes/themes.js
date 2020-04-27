@@ -53,7 +53,7 @@ exports.themes = {
     primLight: '#FF5722',
     primDark: '#BF360C'
   },
-  'aura': {
+  aura: {
     bgColor: '#FAFAFA',
     textColor: '#000000',
     navColor: '#0b0b4e',
