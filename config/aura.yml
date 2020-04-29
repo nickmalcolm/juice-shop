@@ -1,0 +1,183 @@
+application:
+  domain: aura-ctf.op
+  name: 'Aura Hacker Store'
+  logo: 'https://nick.malcolm.net.nz/assets/sot2020/logo.png'
+  favicon: 'https://www.aurainfosec.com/assets/img/favicon.ico'
+  theme: aura
+  showGitHubLinks: false
+  numberOfRandomFakeUsers: 6
+  altcoinName: Auracoin
+  privacyContactEmail: 'donotreply@aura-ctf.op'
+  customMetricsPrefix: auractf
+  social:
+    twitterUrl: 'https://twitter.com/aurainfosec'
+    facebookUrl: null
+    slackUrl: null
+    redditUrl: null
+    pressKitUrl: 'https://research.aurainfosec.com/'
+    questionnaireUrl: null
+  recyclePage:
+    topProductImage: fruit_press.jpg
+    bottomProductImage: apple_pressings.jpg
+  welcomeBanner:
+    showOnFirstStart: true
+    title: "Welcome to the Aura Hacker Store!"
+    message: "This shop is based off OWASP Juice Shop, and has been made with built-in security vulnerabilities. Your job is to find them!<br />First up, find the scoreboard either by looking around, or clicking the orange hat button just below."
+  cookieConsent:
+    backgroundColor: '#000028'
+    textColor: '#ffffff'
+    buttonColor: '#69e2ff'
+    buttonTextColor: '#000000'
+    message: 'This website uses a myriad of 3rd-party cookies for your convenience and tracking pleasure.'
+    dismissText: 'OK!'
+    linkText: ''
+    linkUrl: ''
+  securityTxt:
+    contact: 'mailto:donotreply@aura-ctf.op'
+    encryption: ~
+challenges:
+  showSolvedNotifications: true
+  showHints: true
+  xssBonusPayload: '<iframe src="https://player.vimeo.com/video/411989296?autoplay=1&loop=1&autopause=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>'
+hackingInstructor:
+  isEnabled: true
+products:
+  -
+    name: 'Unisex Aura t-shirt, navy'
+    image: 'https://nick.malcolm.net.nz/assets/sot2020/tshirt.jpg'
+    description: 'This Aura-branded T-Shirt is great for any occassion. One size fits most.'
+    price: 13.51
+    reviews:
+      - { text: 'Pretty aurite.', author: jim }
+  -
+    name: 'Ninja Cat'
+    description: 'The perfect companion to night-time hacking, or breaking in to buildings. Requires daily love and care. Will not reciprocate.'
+    image: 'https://nick.malcolm.net.nz/assets/sot2020/hannah-troupe-0FQneB1VjaM-unsplash.jpg'
+    price: 550
+    quantity: 1
+  -
+    name: 'Lockpicking Set - Small'
+    description: 'A set of 10 assorted lock picks. Only pick locks with permission!'
+    price: 19.99
+    deluxePrice: 9.99
+    image: 'https://nick.malcolm.net.nz/assets/sot2020/lockpicks-small.jpg'
+    reviews:
+      - { text: 'One of my favorites!', author: admin }
+  -
+    name: 'Social Engineering Costume (Red) '
+    description: 'Fool your way past reception and other employees with this red high-vis vest, a hard hat, and clip board.'
+    price: 11.50
+    image: 'https://nick.malcolm.net.nz/assets/sot2020/high-vis-red.jpg'
+  -
+    name: 'Social Engineering Costume (Fluro Green) '
+    description: 'Fool your way past reception and other employees with this fluro green high-vis vest, a hard hat, and clip board.'
+    price: 11.50
+    image: 'https://nick.malcolm.net.nz/assets/sot2020/high-vis-green.jpg'
+    reviews:
+      - { text: 'One of my favorites.', author: jim }
+  -
+    name: '"Get out of jail free" Card'
+    description: 'Present this letter to security guards and law enforcement, and potentially fool them into letting you go.'
+    price: 34
+    image: 'https://nick.malcolm.net.nz/assets/sot2020/letter.jpg'
+    reviews:
+      - { text: 'Worked perfectly. 6/7', author: jim }
+      - { text: 'I take that back, it didn''t work. 0/7', author: jim }
+  -
+    name: 'LinkedIn 2012 Database Dump'
+    description: '117,000,000 usernames and "decrypted" passwords from LinkedIn\''s 2012 breach.'
+    image: 'https://nick.malcolm.net.nz/assets/sot2020/database.png'
+    price: 120
+  -
+    name: 'NSA iOS Rootkit #123'
+    description: 'Get into the latest iOS device using this stolen NSA rootkit.'
+    image: 'https://nick.malcolm.net.nz/assets/sot2020/nsa.png'
+    price: 20000
+    quantity: 0
+    reviews:
+      - { text: 'I bought this and ran the exe, but now my computer is acting weird and the webcam won''t turn off...', author: bender }
+  -
+    name: 'Lockpicking Set - Large'
+    description: 'A set of 20 assorted lock picks. Only pick locks with permission!'
+    image: 'https://nick.malcolm.net.nz/assets/sot2020/lockpicks-large.jpg'
+    price: 39.99
+    deluxePrice: 19.99
+    reviews:
+      - { text: 'I bought this on the advice of Lockpicking Lawyer, and am really happy with it.', author: jim }
+  -
+    name: 'Set of Assorted Locks'
+    description: '15 assorted padlocks, for lock picking practice. Picture as example only.'
+    image: 'https://nick.malcolm.net.nz/assets/sot2020/padlocks.jpg'
+    price: 30
+    reviews:
+      - { text: 'I bought it, got a good bundle for practicing lock picking. 6/7', author: admin }
+  -
+    name: 'Foolproof Lock Pick'
+    image: 'https://nick.malcolm.net.nz/assets/sot2020/hammer-682767_640.jpg'
+    description: 'When your lockpicks fail you, turn to this trusty backup lockpick.'
+    price: 300
+  -
+    name: 'Coffee Beans'
+    image: 'https://nick.malcolm.net.nz/assets/sot2020/coffee-3076958_640.jpg'
+    description: 'Artisinal free-trade coffee, with 20% of proceeds going to local charity.'
+    price: 15
+    reviews:
+      - { text: 'Not my usual choice, but pretty good!', author: bender }
+  -
+    name: 'Colour Contrast Analyser Firefox Extension'
+    description: 'The Colour Contrast Analyser Firefox extension lists colour combinations used in the document in a table that summarises the foreground colour, background colour, luminosity contrast ratio, and the colour difference and brightness difference used in the algorithm suggested in the 26th of April 2000 working draft for Accessibility Evaluation and Repair Tools (AERT). Each element is also listed with its parent elements, and class and id attribute values when specified to make it easier to locate the elements. <br/><span style="color:red;">This extension has been removed because side-effects with other plugins.</span>'
+    price: 0.99
+    image: 'http://juicystudio.com/img/logo.gif'
+    keywordsForPastebinDataLeakChallenge:
+      - juicenote
+      - magische firefox suche
+  -
+    name: 'Aura Hoodie'
+    description: 'Every hacker should have at least one black hoodie in their wardrobe!'
+    price: 49.99
+    image: 'https://nick.malcolm.net.nz/assets/sot2020/hoodie-691449_640.jpg'
+    reviews:
+      - { text: 'You gotta get this.', author: jim }
+  -
+    name: 'OWASP Zed Attack Proxy (ZAP)'
+    description: 'ZAP is one of the world’s most popular free security tools and can help you automatically find security vulnerabilities while you are developing and testing your applications.'
+    price: 0.01
+    image: 'https://avatars2.githubusercontent.com/u/6716868?s=400&v=4'
+    urlForProductTamperingChallenge: 'https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project'
+  -
+    name: 'Christmas Super-Surprise-Box (2014 Edition)'
+    description: 'Contains a random selection of stickers and three Unisex Aura t-shirts for an unbeatable price!'
+    price: 29.99
+    image: undefined.jpg
+    useForChristmasSpecialChallenge: true
+  -
+    name: 'Aura Summer of Tech CTF Logo (3D-printed)'
+    description: 'This rare item was designed and handcrafted in Sweden. This is why it is so incredibly expensive despite its complete lack of purpose.'
+    price: 99.99
+    image: 3d_keychain.jpg
+    fileForRetrieveBlueprintChallenge: 'https://github.com/mozilla/ctf-austin/raw/master/app/public/images/products/3d_keychain.stl'
+  -
+    name: 'Global OWASP WASPY Award 2017 Nomination'
+    description: 'Your chance to nominate up to three quiet pillars of the OWASP community ends 2017-06-30! <a href="https://www.owasp.org/index.php/WASPY_Awards_2017">Nominate now!</a>'
+    price: 0.03
+    image: waspy.png
+    deletedDate: '2017-07-01'
+memories:
+  -
+    image: 'https://nick.malcolm.net.nz/assets/sot2020/alex-wit.jpeg'
+    caption: 'Alex @ VUW Women In Tech 2018, teaching lockpicking!'
+    user: admin
+  -
+    image: 'https://pbs.twimg.com/media/EHDOn2vUYAAWcBV.jpg'
+    caption: 'Learning about RFID at Kawaiicon 2019!'
+    user: admin
+  -
+    image: 'https://nick.malcolm.net.nz/assets/sot2020/bbq.jpeg'
+    caption: 'Team BBQs are frequent!'
+    user: admin
+  -
+    image: 'https://nick.malcolm.net.nz/assets/sot2020/isanz-2018.jpg'
+    caption: 'At the ISANZ 2019 awards'
+    user: admin
+ctf:
+  showFlagsInNotifications: true
