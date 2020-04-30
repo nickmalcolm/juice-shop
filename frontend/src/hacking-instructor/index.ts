@@ -71,6 +71,7 @@ function loadHint (hint: ChallengeHint): HTMLElement {
   elem.style.position = 'absolute'
   elem.style.zIndex = '20000'
   elem.style.backgroundColor = 'rgba(50, 115, 220, 0.9)'
+  elem.style.color = '#fff'
   elem.style.maxWidth = '400px'
   elem.style.minWidth = hint.text.length > 100 ? '350px' : '250px'
   elem.style.padding = '16px'
@@ -95,6 +96,7 @@ function loadHint (hint: ChallengeHint): HTMLElement {
 
   const textBox = document.createElement('span')
   textBox.style.flexGrow = '2'
+  textBox.style.overflow = 'auto'
   textBox.innerHTML = snarkdown(hint.text)
 
   elem.appendChild(picture)
@@ -124,23 +126,35 @@ export async function startHackingInstructorFor (challengeName: String): Promise
   const challengeInstruction = challengeInstructions.find(({ name }) => name === challengeName) || TutorialUnavailableInstruction
 
   for (const hint of challengeInstruction!.hints) {
-    const element = loadHint(hint)
-    if (!element) {
+    const hintWrapper = loadHint(hint)
+    if (!hintWrapper) {
       console.warn(`Could not find Element with fixture "${hint.fixture}"`)
       continue
     }
-    element.scrollIntoView()
+    
+    // Make sure it's visible
+    const hintElement = hintWrapper.firstChild as HTMLElement
+    const windowWidth = (window.innerWidth || document.documentElement.clientWidth)
+    const windowHeight = (window.innerHeight || document.documentElement.clientHeight)
+    const box = hintElement.getBoundingClientRect()
+    if (box.right > windowWidth) {
+      hintElement.style.left = "-" + (box.right - windowWidth) + "px"
+    }
+    if (box.top < 0 || box.bottom > windowHeight) {
+      hintElement.scrollIntoView()
+    }
+
 
     const continueConditions: Promise<void | {}>[] = [
       hint.resolved()
     ]
 
     if (hint.unskippable !== true) {
-      continueConditions.push(waitForClick(element))
+      continueConditions.push(waitForClick(hintWrapper))
     }
 
     await Promise.race(continueConditions)
 
-    element.remove()
+    hintWrapper.remove()
   }
 }

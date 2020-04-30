@@ -1,5 +1,5 @@
 application:
-  domain: aura-ctf.op
+  domain: hacker-sto.re
   name: 'Aura Hacker Store'
   logo: 'https://nick.malcolm.net.nz/assets/sot2020/logo.png'
   favicon: 'https://www.aurainfosec.com/assets/img/favicon.ico'
@@ -7,7 +7,7 @@ application:
   showGitHubLinks: false
   numberOfRandomFakeUsers: 6
   altcoinName: Auracoin
-  privacyContactEmail: 'donotreply@aura-ctf.op'
+  privacyContactEmail: 'donotreply@hacker-sto.re'
   customMetricsPrefix: auractf
   social:
     twitterUrl: 'https://twitter.com/aurainfosec'

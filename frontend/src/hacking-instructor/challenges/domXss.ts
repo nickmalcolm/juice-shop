@@ -17,23 +17,22 @@ export const DomXssInstruction: ChallengeInstruction = {
       text:
         "For this challenge, we'll take a close look at the _Search_ field at the top of the screen.",
       fixture: '#searchQuery',
-      unskippable: true,
       resolved: waitInMs(8000)
     },
     {
-      text: "Let's start by searching for all products containing `owasp` in their name or description.",
+      text: "Let's start by searching for all products containing `aura` in their name or description.",
       fixture: '#searchQuery',
       unskippable: true,
-      resolved: waitForInputToHaveValue('#searchQuery input', 'owasp')
+      resolved: waitForInputToHaveValue('#searchQuery input', 'aura')
     },
     {
       text: 'Now hit enter.',
       fixture: '#searchQuery',
       unskippable: true,
-      resolved: waitForElementsInnerHtmlToBe('#searchValue', 'owasp')
+      resolved: waitForElementsInnerHtmlToBe('#searchValue', 'aura')
     },
     {
-      text: 'Nice! You should now see many cool OWASP-related products.',
+      text: 'Nice! You should now see many cool Aura-related products.',
       fixture: '#searchQuery',
       resolved: waitInMs(8000)
     },
@@ -48,16 +47,16 @@ export const DomXssInstruction: ChallengeInstruction = {
       resolved: waitInMs(15000)
     },
     {
-      text: 'Change your search value into `<h1>owasp` to see if we can inject HTML.',
+      text: 'Change your search value into `<h1>aura` to see if we can inject HTML.',
       fixture: '#searchQuery',
       unskippable: true,
-      resolved: waitForInputToHaveValue('#searchQuery input', '<h1>owasp')
+      resolved: waitForInputToHaveValue('#searchQuery input', '<h1>aura')
     },
     {
       text: 'Hit enter again.',
       fixture: '#searchQuery',
       unskippable: true,
-      resolved: waitForElementsInnerHtmlToBe('#searchValue', '<h1>owasp</h1>') // Browsers will autocorrect the unclosed tag.
+      resolved: waitForElementsInnerHtmlToBe('#searchValue', '<h1>aura</h1>') // Browsers will autocorrect the unclosed tag.
     },
     {
       text: "Hmm, this doesn't look normal, does it?",
