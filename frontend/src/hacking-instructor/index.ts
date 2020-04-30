@@ -131,19 +131,18 @@ export async function startHackingInstructorFor (challengeName: String): Promise
       console.warn(`Could not find Element with fixture "${hint.fixture}"`)
       continue
     }
-    
+
     // Make sure it's visible
     const hintElement = hintWrapper.firstChild as HTMLElement
     const windowWidth = (window.innerWidth || document.documentElement.clientWidth)
     const windowHeight = (window.innerHeight || document.documentElement.clientHeight)
     const box = hintElement.getBoundingClientRect()
     if (box.right > windowWidth) {
-      hintElement.style.left = "-" + (box.right - windowWidth) + "px"
+      hintElement.style.left = '-' + (box.right - windowWidth) + 'px'
     }
     if (box.top < 0 || box.bottom > windowHeight) {
       hintElement.scrollIntoView()
     }
-
 
     const continueConditions: Promise<void | {}>[] = [
       hint.resolved()
